@@ -1,0 +1,94 @@
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .section {
+      position: relative;
+      border: 1px solid black;
+      margin: 10px;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 1px solid black;
+      padding: 5px;
+      background-color: #ddd;
+      font-size: 1.25em;
+    }
+
+    .section p {
+      margin-top: 30px;
+      font-size: 1em;
+    }
+
+    /* Desktop View */
+    @media (min-width: 992px) {
+      .section {
+        width: 31.33%; /* Roughly 1/3 of the container width */
+        float: left;
+      }
+    }
+
+    /* Tablet View */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .section {
+        width: 48%; /* Roughly 1/2 of the container width */
+        float: left;
+      }
+      .section:nth-child(3) {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    /* Mobile View */
+    @media (max-width: 767px) {
+      .section {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    /* Colors */
+    .section:nth-child(1) {
+      background-color: #f0e68c;
+    }
+    .section:nth-child(1) .section-title {
+      background-color: #ffd700;
+    }
+
+    .section:nth-child(2) {
+      background-color: #add8e6;
+    }
+    .section:nth-child(2) .section-title {
+      background-color: #87ceeb;
+    }
+
+    .section:nth-child(3) {
+      background-color: #90ee90;
+    }
+    .section:nth-child(3) .section-title {
+      background-color: #32cd32;
+    }
